@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DK Library</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 24px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f5f5f5;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #2c3e50;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            color: #ecf0f1;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            max-height: 400px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin: 0;
+            padding: 10px 0;
+            font-size: 18px;
+            color: #2c3e50;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1200px) {
+            .card-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            main {
+                padding: 30px;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .nav-links a {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .card h3 {
+                font-size: 16px;
+                height: 50px;
+            }
+
+            .card img {
+                max-height: 300px;
+            }
+        }
+
+        /* Mobile Menu Button */
+        .menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: #ecf0f1;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 600px) {
+            .menu-button {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">DK Library</div>
+        <button class="menu-button">☰</button>
+        <div class="nav-links">
+            <a href="web_eg.html">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="card-grid">
+            <!-- Row 1 -->
+            <div class="card">
+                <img src="images/L1.jpg" alt="Fifty Shades of Grey">
+                <h3>Fifty Shades of Grey</h3>
+            </div>
+            <div class="card">
+                <img src="images/L2.jpg" alt="Why men love bitches">
+                <h3>Why men love bitches</h3>
+            </div>
+            <div class="card">
+                <img src="images/L3.jpg" alt="We Were Never Meant To Be">
+                <h3>We Were Never Meant To Be</h3>
+            </div>
+            <div class="card">
+                <img src="images/L4.jpg" alt="Twisted Love">
+                <h3>Twisted Love</h3>
+            </div>
+            <!-- Row 2 -->
+            <div class="card">
+                <img src="images/L5.jpg" alt="Can We Be Strangers Again?">
+                <h3>Can We Be Strangers Again?</h3>
+            </div>
+            <div class="card">
+                <img src="images/L6.jpg" alt="The Psychology of Money">
+                <h3>The Psychology of Money</h3>
+            </div>
+            <div class="card">
+                <img src="images/L7.jpg" alt="Thank You for Leaving">
+                <h3>Thank You for Leaving</h3>
+            </div>
+            <div class="card">
+                <img src="images/L8.jpg" alt="The 48 laws of power">
+                <h3>The 48 laws of power</h3>
+            </div>
+            <!-- Row 3 -->
+            <div class="card">
+                <img src="images/L9.jpg" alt="I Don't Love You Anymore">
+                <h3>I Don't Love You Anymore</h3>
+            </div>
+            <div class="card">
+                <img src="images/L10.jpg" alt="Haunting Adeline">
+                <h3>Haunting Adeline</h3>
+            </div>
+            <div class="card">
+                <img src="images/L11.jpg" alt="It Starts with Us">
+                <h3>It Starts with Us</h3>
+            </div>
+            <div class="card">
+                <img src="images/L12.jpg" alt="The Silent Patient">
+                <h3>The Silent Patient</h3>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Copyright by Derek Valeska. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('.menu-button');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
